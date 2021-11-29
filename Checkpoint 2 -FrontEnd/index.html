@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulário de Cadastro</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Seja Bem-vindo a Salvador!</h1>
+      <h2>Formulário de cadastro para turista</h2>
+    </div>
+
+    <form action="/cadastrar" name="cadastro-usuario">
+      <fieldset form="cadastro-usuario" class="cadastro">
+        <legend><strong>Dados Pessoais</strong></legend>
+
+        <div>
+          <label for="nome"><strong>Nome:</strong></label>
+          <input
+            type="text"
+            name="nome"
+            id="nome"
+            placeholder="Insira seu nome completo"
+            size="50"
+            maxlength="100"
+            required
+          />
+        </div>
+        <div>
+          <label for="email"><strong>Email:</strong></label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Insira o seu email"
+            size="50"
+          />
+        </div>
+
+        <div>
+          <label for="data"> <strong>Data de nascimento:</strong></label>
+          <input
+            type="date"
+            name="data"
+            id="data"
+            min="1980-01-01"
+            value=""
+            placeholder="Data de nascimento"
+          />
+        </div>
+
+        <div>
+          <label for="telefone"> <strong>Telefone:</strong></label>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            placeholder="Digite seu telefone"
+            maxlength="15"
+          />
+        </div>
+
+        <div>
+          <label for="idade"> <strong>Você é maior de 18 anos</strong> ?</label>
+          <br />
+          <input type="radio" name="idade" id="maior" checked />
+          <label for="maior">Maior de 18 anos</label>
+          <input type="radio" name="idade" id="menor" />
+          <label for="menor">Menor de 18 anos</label>
+        </div>
+      </fieldset>
+
+      <fieldset form="Pontos Turísticos" class="expectativas">
+        <legend><strong>Conhecendo a cidade de Salvador</strong></legend>
+
+        <div>
+          <label for="Visita"
+            ><strong
+              >Qual ponto turístico de Salvador você mais deseja
+              conhecer?</strong
+            ></label
+          >
+          <select name="locais" id="locais">
+            <option value="1">Farol da Barra</option>
+            <option value="2">Elevador Lacerda</option>
+            <option value="3">Pelourinho</option>
+            <option value="4">Igreja do Senhor do Bonfim</option>
+            <option value="5">Mont Serrat</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="expectativas">
+            <strong
+              >Quais são as suas expectativas para visitar Salvador?</strong
+            >
+          </label>
+          <textarea
+            name="expectativas"
+            id="expectativas"
+            cols="50"
+            rows="5"
+            placeholder="Quais as suas expectativas para visitar Salvador?
+          "
+          ></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset form="cadastro-objetivo" class="objetivo">
+        <legend><strong>Objetivo da visita</strong></legend>
+
+        <div>
+          <p><strong>Interesses na cidade:</strong></p>
+          <input type="checkbox" name="turista" id="turista" />
+          <label for="turista"><strong>Turismo</strong></label>
+          <input type="checkbox" name="residente" id="residente" />
+          <label for="residente"><strong>Residente</strong></label>
+          <input type="checkbox" name="estudante" id="estudante" />
+          <label for="estudante"><strong>Estudante</strong></label>
+          <input type="checkbox" name="trabalho" id="trabalho" />
+          <label for="trabalho"><strong>Trabalho</strong></label>
+        </div>
+      </fieldset>
+
+      <div class="button-group">
+        <button type="reset">Limpar</button>
+        <button type="submit">Cadastrar</button>
+      </div>
+    </form>
+  </body>
+</html>
